@@ -1,59 +1,32 @@
-# Looker Extension (React & JavaScript)
+**A Note on Support**
 
-This example demonstrates a bare bones Looker extension using Javascript.
+The visualizations provided in this repository are intended to serve as examples. Looker's support team does not troubleshoot issues relating to these example visualizations or your custom visualization code. Supported visualizations are downloadable through the [Looker Marketplace](https://docs.looker.com/data-modeling/marketplace). 
 
-## Getting Started for Development
+----
 
+# Looker Visualization API Examples [![Build Status](https://travis-ci.org/looker/visualization-api-examples.svg?branch=master)](https://travis-ci.org/looker/visualization-api-examples)
 
-1. Install the dependencies with [Yarn](https://yarnpkg.com/).
+[Looker](https://looker.com/)'s Visualization API provides a simple JavaScript interface to creating powerful, customizable visualizations that seamlessly integrate into your data applications. :bar_chart: :chart_with_downwards_trend: :chart_with_upwards_trend:
 
-   ```
-   yarn install
-   ```
+### [Getting Started Guide &rarr;](docs/getting_started.md)
 
-2. Start the development server
+### [Visualization API Reference &rarr;](docs/api_reference.md)
 
-   ```
-   yarn develop
-   ```
+### [View Examples Library &rarr;](src/examples)
 
-   The extension is now running and serving the JavaScript locally at http://localhost:8080/bundle.js.
+# Getting Started
 
-3. Log in to Looker and create a new project.
+1. [Ensure you have Yarn installed.](https://yarnpkg.com)
+2. Run `yarn`
+3. :boom: start creating!
 
-   This is found under **Develop** => **Manage LookML Projects** => **New LookML Project**.
+# Commands
 
-   Select "Blank Project" as your "Starting Point". This will create a new project with no files.
-
-   1. The extension folder has a `manifest.lkml` file.
-
-   Either drag & upload this file into your Looker project, or create a `manifest.lkml` with the same content. Change the `id`, `label`, or `url` as needed.
+* `yarn build` - Compiles the code in `/src` to `/dist` via webpack
+* `yarn lint` - Runs TSLint across the codebase.
+* `yarn lint-fix` - Runs TSLint and attempts to fix any linter errors automatically.
 
 
-4. Create a `model` LookML file in your project. The name doesn't matter but the convention is to name it the same as the project— in this case, helloworld-js.
+----
 
-- Add a connection in this model.
-- [Configure the model you created](https://docs.looker.com/data-modeling/getting-started/create-projects#configuring_a_model) so that it has access to the selected connection.
-  We do this because Looker permissions data access via models— In order to grant / limit access to an extension, it must be associated with a model.
 
-5. Connect the project to Git. This can be done in multiple ways:
-
-- Create a new repository on GitHub or a similar service, and follow the instructions to [connect your project to Git](https://docs.looker.com/data-modeling/getting-started/setting-up-git-connection)
-- A simpler but less powerful approach is to set up git with the "Bare" repository option which does not require connecting to an external Git Service.
-
-6. Commit the changes and deploy them to production through the Project UI.
-
-7. Reload the page and click the `Browse` dropdown menu. You will see the extension in the list.
-
-- The extension will load the JavaScript from the `url` provided in the `application` definition. By default, this is http://localhost:8080/bundle.js. If you change the port your server runs on in the package.json, you will need to also update it in the manifest.lkml.
-- Refreshing the extension page will bring in any new code changes from the extension template, although some changes will hot reload.
-
-## Deployment
-
-The process above describes how to run the extension for development. Once you're done developing and ready to deploy, the production version of the extension may be deployed as follows:
-
-1. In the extension project directory build the extension by running `yarn build`.
-2. Drag and drop the generated `dist/bundle.js` file into the Looker project interface
-3. Modify the `manifest.lkml` to use `file` instead of `url`:
-
-   
