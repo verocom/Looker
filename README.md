@@ -8,7 +8,7 @@ This example demonstrates a bare bones Looker extension using Javascript.
 1. Install the dependencies with [Yarn](https://yarnpkg.com/).
 
    ```
-   yarn install
+   yarn install !
    ```
 
 2. Start the development server
