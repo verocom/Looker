@@ -1,6 +1,6 @@
-import { options } from './options.js';
-import GlobalConfig from './globalConfig.js';
-import PivotHeader from './pivotHeader.js';
+import { options } from 'options.js';
+import GlobalConfig from 'globalConfig.js';
+import PivotHeader from 'pivotHeader.js';
 
 /* eslint-disable arrow-body-style, no-undef, no-use-before-define */
 
