@@ -42,23 +42,27 @@
 
 .reportTable th {
   color: #333;
-  border: none;
-  border-bottom: 1px solid #CCCCCC !important;
-  /* font-size: 10px;  */
+  border: 1px solid #D3D3D3;
+  border-top: none;
+  border-bottom:2px solid #D3D3D3;
   padding: 10px 15px;
-
+  font-weight: 500
 }
 
 .reportTable td {
   color: #333;
   vertical-align: super;
   padding: 10px 15px;
-  /*background: #FFFFFF;*/
-  border: 1px solid #cccccc; 
+  border: 1px solid #D3D3D3; 
   border-collapse: collapse;
 }
-.reportTable tr:nth-child(2n+2) {
-  background: #f0f1f1;
+.reportTable th:first-child,
+.reportTable td:first-child {
+  border-left:none;
+}
+.reportTable th:last-child,
+.reportTable td:last-child {
+  border-right:none;
 }
 .left {
   text-align: left;
