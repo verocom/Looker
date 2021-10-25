@@ -39,11 +39,11 @@
 
 .reportTable {
   font-family: Roboto, Open Sans,Helvetica,Arial,sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   border: 1px solid #CCCCCC; 
   border-collapse: collapse;
   border-spacing: 3px;
-
+margin-right: 8px;
   /* Add customization here  */
 
 }
