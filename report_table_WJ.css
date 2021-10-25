@@ -36,6 +36,10 @@
 
 
 }
+#visContainer {
+    position: static !important;
+    z-index: 0;
+}
 
 .reportTable {
   font-family: Roboto, Open Sans,Helvetica,Arial,sans-serif;
