@@ -27,6 +27,12 @@
     font-size: 12px;
     line-height: 15px;
 }
+#vis {
+    height: 100%;
+    width: calc(100%-20px);
+    margin: 0 10px;
+    border: 1px solid #D3D3D3;
+}
 
 #visContainer {
     position: static !important;
