@@ -41,14 +41,15 @@
 .reportTable {
   font-family: Roboto, Open Sans,Helvetica,Arial,sans-serif;
   font-size: 12px;
-  border-collapse: collapse;
   text-align: left !important;
+    border-collapse: separate;
+    border-spacing: 0;
 
 }
 
 .reportTable th {
   color: #333;
-  border: 1px solid #D3D3D3;
+  border-right: 1px solid #D3D3D3;
   border-top: none;
   border-bottom:2px solid #D3D3D3;
   padding: 15px;
@@ -64,8 +65,8 @@
   color: #333;
   vertical-align: super;
   padding: 10px 15px;
-  border: 1px solid #D3D3D3; 
-  border-collapse: collapse;
+  border-right: 1px solid #D3D3D3; 
+    border-bottom: 1px solid #D3D3D3; 
 }
 .reportTable th:first-child,
 .reportTable td:first-child {
